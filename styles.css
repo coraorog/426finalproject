@@ -1,0 +1,122 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f8f1; /* Light cream background */
+    color: #2e4d29; /* Dark green text */
+    line-height: 1.6;
+    padding: 20px;
+    background-image: url('https://www.transparenttextures.com/patterns/leaf.png');
+    background-repeat: repeat;
+}
+
+/* Header Styling */
+h1 {
+    color: #4b7f30; /* Earthy green */
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #6b9e3f; /* Fresh green */
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+/* Links Styling */
+a {
+    color: #89a22d; /* Olive green */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #b5d150; /* Lighter green on hover */
+}
+
+/* Container for list of tables */
+ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+ul li {
+    list-style: none;
+    margin: 10px 0;
+    padding: 10px 20px;
+    background-color: #d6f5a4; /* Light green background */
+    border-radius: 10px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+ul li:hover {
+    background-color: #a8d96b; /* Hover with darker green */
+    transform: scale(1.05);
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    margin-top: 30px;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #4b7f30;
+}
+
+th {
+    background-color: #8f9e57; /* Olive-green header */
+    color: white;
+}
+
+td {
+    background-color: #f7f8e0; /* Very light green */
+}
+
+td:hover {
+    background-color: #d6f5a4; /* Light green on hover */
+}
+
+/* Button Styling */
+button {
+    background-color: #6b9e3f;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #4b7f30; /* Darker green on hover */
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 10px;
+    background-color: #4b7f30;
+    color: white;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: #d6f5a4; /* Lighter green for footer links */
+}

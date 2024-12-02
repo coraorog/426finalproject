@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Record</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Add a Record to {{ table_name }}</h1>
+    <form method="post">
+        {% for column in columns %}
+        <label for="{{ column }}">{{ column }}</label>
+        <input type="text" name="{{ column }}" id="{{ column }}" required>
+        <br>
+        {% endfor %}
+        <button type="submit">Add Record</button>
+    </form>
+</body>
+</html>

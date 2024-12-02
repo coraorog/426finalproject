@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Database Tables</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Welcome to the Plant Store Database</h1>
+    <h2>Available Tables</h2>
+    <ul>
+        {% for table in tables %}
+        <li><a href="/view/{{ table }}">{{ table }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
