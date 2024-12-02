@@ -12,5 +12,10 @@
         <li><a href="/view/{{ table }}">{{ table }}</a></li>
         {% endfor %}
     </ul>
+    <div id="plant-fact">
+        <h3>Random Plant Fact:</h3>
+        <p id="fact">Loading...</p>
+      </div>
+      <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 </html>
