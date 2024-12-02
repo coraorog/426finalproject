@@ -1,5 +1,6 @@
 from flask import Flask, g, request, jsonify, render_template, redirect, url_for
 import sqlite3
+import requests
 import os
 
 # Initialize the Flask application
@@ -40,6 +41,19 @@ def home():
     tables = [table[0] for table in cursor.fetchall()]
     return render_template('index.html', tables=tables)
 
+@app.route('/api/plants')
+def get_plants():
+    """
+    Proxy route to fetch plant data from the Trefle API.
+    """
+    API_TOKEN = '1t8skG5tcDfrLsVt3IGQpZYMhW9_2ZMTyRX7tt6mbG4'
+    trefle_url = f'https://trefle.io/api/v1/plants?token={API_TOKEN}'
+
+    response = requests.get(trefle_url)
+    if response.status_code == 200:
+        return jsonify(response.json())  # Return the API response as JSON
+    else:
+        return jsonify({"error": "Failed to fetch plant data"}), response.status_code
 # Route: View records in a specific table with Add/Delete buttons
 @app.route('/view/<table_name>')
 def view_table(table_name):
