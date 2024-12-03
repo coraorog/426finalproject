@@ -6,7 +6,7 @@ setup(
     packages=find_packages(),
     include_package_data=True,  
     package_data={
-        '': ['Plant_Parenthood.db'], 
+        '': ['Plant_Parenthood2.db'], 
     },
     install_requires=[],  
     description='A library for interacting with the Plant Parenthood Database',
