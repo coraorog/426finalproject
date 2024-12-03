@@ -2,9 +2,14 @@
 <html>
 <head>
     <title>Database Tables</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename=theme ~ '.css') }}">
 </head>
 <body>
+    {% if username %}
+    <p>Welcome, {{ username }}! <a href="/logout">Logout</a> | <a href="/preferences">Preferences</a></p>
+    {% else %}
+        <p><a href="/login">Login</a></p>
+    {% endif %}
     <h1>Welcome to the Plant Store Database</h1>
     <h2>Available Tables</h2>
     <ul>
